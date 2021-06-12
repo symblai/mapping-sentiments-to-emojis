@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+
+    <script src="src/index.js">
+    </script>
+
+    <style>
+        td, th, span, h1, h2, h3, h4, h5, h6, p, li, input {
+            font-family: "Helvetica Neue";
+        }
+        h1 {
+            font-family: "Helvetica Neue";
+            font-size: 20pt;
+            color: #262626;
+        }
+        h2 {
+            font-size: 17pt;
+            color: #262626;
+        }
+        table {
+            border-collapse: collapse;
+            table-layout: fixed;
+            min-width: 300px;
+            margin: 0 auto;
+        }
+        table thead tr th {
+            text-align: center;
+        }
+
+        table tr td, table tr th {
+            border: 1px solid #262626;
+            padding: 5px;
+            text-align: center;
+            min-width: 150px;
+        }
+
+        #end-call-status {
+            display: none;
+        }
+        #call-status {
+            font-size: 250pt;
+            vertical-align: middle;
+        }
+
+        .section {
+            margin-top: 60px;
+            text-align: center;
+        }
+
+        .hide {
+            display: none;
+        }
+        .flex {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex > div {
+            width: 45%;
+            vertical-align: top;
+            text-align: center;
+            align-items: center;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .btn-container button {
+            outline: none;
+            border: 1px solid #262626;
+            font-size: 12pt;
+            padding: 5px 10px;
+            margin: 0 20px;
+            cursor: pointer;
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <div class="btn-container">
+        <button type="button" onclick="openSocket()">Start Call</button>
+
+        <button type="button" onclick="closeSocket()">End Call</button>
+    </div>
+
+    <div class="flex">
+        <div class="section" id="table-parent">
+            <h1>Polarity Score</h1>
+
+            <p id="start-instructions">Press <strong>Start Call</strong> to start tacking polarity</p>
+
+            <table>
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Polarity</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+        </div>
+
+        <div class="section" id="sentiment-totals">
+
+            <h1>Sentiment Analysis Totals</h1>
+
+            <p>We keep track of the call sentiment here.</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Happy</th>
+                        <th>Sad</th>
+                        <th>Neutral</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="total-happy">0</span> 😃</td>
+                        <td><span id="total-sad">0</span> 😞</td>
+                        <td><span id="total-neutral">0</span> 😐</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="section" id="end-call-status">
+        <h1>End Call Status</h1>
+
+        <p><span id="call-status"></span></p>
+    </div>
+</body>
+
+</html>
