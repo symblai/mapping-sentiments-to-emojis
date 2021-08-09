@@ -42,7 +42,7 @@ curl -k -X POST "https://api.symbl.ai/oauth2/token:generate" \
 
 
 ## Conclusion
-You application interprets sentiments from Symbl.ai's Conversation API Message API with the /message's API's parameter for `sentiments` set to `true`. After making calls to the Message API, your application interprets the messages with scores below -0.3 as 😞, the messages with scores above 0.3 as 😃, the messages between those scores as 😐. It demonstrates how Symbl.ai's Conversation Intelligence API platform empowers developers to connect, transform or visualize conversation data in real-time with little to no coding. 
+You application interprets sentiments from Symbl.ai's Conversation API Message API with the /message's API's parameter for `sentiments` set to `true`. After making calls to the Message API, your application interprets the messages with scores below -0.3 as 😞, the messages with scores above 0.3 as 😃, the messages between those scores as 😐. It demonstrates how Symbl.ai's Conversation Intelligence API platform empowers developers to connect, transform or visualize conversation data in real-time streaming applications. 
 
 ## Community
 
@@ -58,5 +58,5 @@ This library is released under the [Apache License][license]
 [developer_community]: https://community.symbl.ai/?_ga=2.134156042.526040298.1609788827-1505817196.1609788827
 [slack]: https://join.slack.com/t/symbldotai/shared_invite/zt-4sic2s11-D3x496pll8UHSJ89cm78CA
 [signup]: https://platform.symbl.ai/?_ga=2.63499307.526040298.1609788827-1505817196.1609788827
-[issues]: https://github.com/symblai/symbl-for-zoom/issues
-[pulls]: https://github.com/symblai/symbl-for-zoom/pulls
+[issues]: https://github.com/symblai/mapping-sentiments-to-emojis/issues
+[pulls]: https://github.com/symblai/mapping-sentiments-to-emojis/pulls
